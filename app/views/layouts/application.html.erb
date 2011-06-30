@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8" />
+    <title>just a web page about cc</title>
+	  <%= stylesheet_link_tag :all %>
+	  <%= javascript_include_tag 'jquery-1.6.1.min', 'rails', 'application' %>
+	  <%= csrf_meta_tag %>
+  </head>
+  <body>
+  <div id="page">
+  	<div id="header">
+  		<div id="notes">
+		  	<%= content_tag :p, notice, :class => 'notice' if notice.present? %>
+			<%= content_tag :p, alert, :class => 'alert' if alert.present? %> 
+		</div>
+  	</div>
+  	<div id="content">
+	  <div class="layout grid-m0s5">
+	    <div class="col-main">
+	        <div class="main-wrap">
+	        	<div id="top-nav">
+  				<ul>
+	  				<li><%= link_to "文摘", root_path %></li>
+	  				<li>|<%= link_to "博客", blog_path %></li>
+	  				<li>|<a href="about.html">关于</a></li>
+  				</ul><br/>
+  				</div>
+				<%= yield %>
+	        </div>
+	    </div>
+	    <div class="col-sub">
+	        <% if logged_in? %> 
+		    	<%= link_to "Logout", logout_path %><br/> 
+	        	<%= link_to "New Article", new_article_path %><br/>
+	    		<%= link_to "Edit Password", edit_user_path(current_user) %> 
+  			<% else %> 
+        		<%= link_to "Login", login_path %> 
+      		<% end %>
+	    </div>
+	  </div>
+	 </div>
+	 <div id="footer">
+	 	    A simple blog for cc.2011-2012.
+	 </div>
+  </div>
+  <script>
+	$(function(){
+
+	});
+  </script>    
+  </body>
+</html>

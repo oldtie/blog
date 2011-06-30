@@ -1,0 +1,40 @@
+body{ background:url(../images/bg.png) #fff no-repeat; background-position:center 50px; }
+pre { background-color: #eee; padding: 10px; font-size: 90%; }
+a { color:#d51; padding:1px 2px; }
+a:hover { color:#000;}
+.notice{ color:green; }
+.alert{ color:red; }
+.grid-m0s5 .main-wrap{ margin-right:200px; }
+.grid-m0s5 .col-sub{ width:190px;margin-left:-190px;text-align:right; }
+#page{ width:860px;margin:60px auto; }
+#header{ height:20px;text-align:center; }
+#footer{ border-top:1px dotted #ccc;padding-top:10px;clear:both;text-align:center;margin-top:50px; }
+#top-nav li{ float:left;padding-right:5px; }
+#content h1{ color:#ddd;font-size:220%;padding-top:20px; }
+/*form*/
+#content form br{ display:none;float:left; }
+#content form label{ width:150px;display:block;text-align:right;padding-right:10px;float:left;line-height:21px;vertical-align:center;background-color:#F0F0F0;border:2px solid #ccc;margin-right:10px; }
+#content form label.check_box_label{ width:auto;display:inline;text-align:right;padding-right:10px;line-height:21px;vertical-align:center;background-color:#FFF;border: none; }
+#content form .field,
+#content form .actions{ padding-top:10px;clear:both; }
+#content form input[type=text], 
+#content form input[type=password], 
+#content form textarea{ float:left;font-size:14px;width:250px;padding:2px;border:2px solid #ccc; }
+#content form input[type=checkbox]{ margin:4px;float:left; }
+#content form textarea{ height: 150px; }
+#content form input[type=submit]{ margin-left:175px;float:left;margin-right: 10px;margin-bottom: 10px; }
+/*Article title*/
+#content h3{ padding-top:10px;height:20px;font-size:120%; }
+#content h3 .actions{ display:none;font-weight:normal;font-size:10px; }
+#content h3:hover .actions{ display: inline; }
+/*Article body*/
+#content h4{ padding-left:30px;font-style:italic; }
+#content p{ padding:5px 30px; }
+#content h4 a{ font-weight:normal;color:#88f; }
+/*form errors*/
+.field_with_errors{ display:table;float:left;margin:0;width:100px;margin-right:10px; }
+.field_with_errors label{ border:2px solid red;margin-right:0px; }
+.field_with_errors input, 
+.field_with_errors textarea{ width:250px;border:2px solid red; }
+#error_explanation{ color:#e00;width:413px;border:2px solid red;padding:7px;padding-bottom:12px;margin-bottom:20px;background-color:#f0f0f0;margin:0; }
+
