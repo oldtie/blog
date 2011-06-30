@@ -9,8 +9,8 @@ class Article < ActiveRecord::Base
   scope :published, where("articles.published_at IS NOT NULL") 
   scope :draft, where("articles.published_at IS NULL") 
   scope :nice, where("articles.love_id > 10")
-  scope :zhai, where("articles.from_url!=''")
-  scope :blog, where("articles.from_url==''")
+  scope :zhai, where("articles.from_url!=''and articles.from_url IS NOT NULL")
+  scope :blog, where("articles.from_url IS NULL or articles.from_url==''")
   scope :recent, lambda { published.where("articles.published_at > ?",  1.week.ago.to_date)} 
   
   def published?
@@ -23,7 +23,11 @@ class Article < ActiveRecord::Base
   end 
   
   def is_zhai?
-   return from_url=="" ? false : true
+    if from_url==nil || from_url==""
+    	return false 
+    else
+    	return true
+    end
   end
   
   def short_url
