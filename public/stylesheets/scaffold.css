@@ -1,7 +1,7 @@
-body{ background:url(../images/bg.png) #fff no-repeat; background-position:center 50px; }
-pre { background-color: #eee; padding: 10px; font-size: 90%; }
-a { color:#d51; padding:1px 2px; }
-a:hover { color:#000;}
+body{ background:url(../images/bg.png) #fff no-repeat;background-position:center 50px; }
+pre{ background-color: #eee;padding:10px;font-size:90%; }
+a{ color:#d51;padding:1px 2px; }
+a:hover{ color:#000;}
 .notice{ color:green; }
 .alert{ color:red; }
 .grid-m0s5 .main-wrap{ margin-right:200px; }
@@ -12,17 +12,18 @@ a:hover { color:#000;}
 #top-nav li{ float:left;padding-right:5px; }
 #content h1{ color:#ddd;font-size:220%;padding-top:20px; }
 /*form*/
-#content form br{ display:none;float:left; }
-#content form label{ width:150px;display:block;text-align:right;padding-right:10px;float:left;line-height:21px;vertical-align:center;background-color:#F0F0F0;border:2px solid #ccc;margin-right:10px; }
-#content form label.check_box_label{ width:auto;display:inline;text-align:right;padding-right:10px;line-height:21px;vertical-align:center;background-color:#FFF;border: none; }
-#content form .field,
-#content form .actions{ padding-top:10px;clear:both; }
-#content form input[type=text], 
-#content form input[type=password], 
-#content form textarea{ float:left;font-size:14px;width:250px;padding:2px;border:2px solid #ccc; }
-#content form input[type=checkbox]{ margin:4px;float:left; }
-#content form textarea{ height: 150px; }
-#content form input[type=submit]{ margin-left:175px;float:left;margin-right: 10px;margin-bottom: 10px; }
+form br{ display:none;float:left; }
+label{ width:150px;display:block;text-align:right;padding-right:10px;float:left;line-height:21px;vertical-align:center;background-color:#F0F0F0;border:2px solid #ccc;margin-right:10px; }
+.check_box_label{ width:auto;display:inline;text-align:right;padding-right:10px;line-height:21px;vertical-align:center;background-color:#FFF;border: none; }
+.field,
+.actions{ padding-top:10px;clear:both; }
+.actions:after{ content: '\20';clear:both;display:block;height:0; }
+input[type=text], 
+input[type=password], 
+textarea{ float:left;font-size:14px;width:250px;padding:2px;border:2px solid #ccc; }
+input[type=checkbox]{ margin:4px;float:left; }
+textarea{ height:150px; }
+input[type=submit]{ margin-left:175px;float:left;margin-right:10px;margin-bottom:10px;height:24px;padding:0 5px; }
 /*Article title*/
 #content h3{ padding-top:10px;height:20px;font-size:120%; }
 #content h3 .actions{ display:none;font-weight:normal;font-size:10px; }
